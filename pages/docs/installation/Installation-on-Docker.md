@@ -17,6 +17,7 @@ Create an empty directory (for example, `~/crossbar-hello`) into which to place 
 FROM debian:jessie
 
 RUN apt-get update && apt-get -y install build-essential libssl-dev libffi-dev libreadline-dev libbz2-dev libsqlite3-dev libncurses5-dev python-pip python-dev
+RUN pip install --upgrade cffi
 RUN pip install crossbar[all]
 
 # This creates the default "hello world" application.
